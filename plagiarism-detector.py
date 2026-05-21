@@ -25,8 +25,9 @@ def search_word(words1, words2):
     keyword = input("\nEnter a word to search: ").lower().strip()
     found1 = words1.count(keyword)
     found2 = words2.count(keyword)
-    if found1 == 0 and found2 == 0:
-        print(f"  Result: False — '{keyword}' not found in either essay.")
+    if found1 == 0 or found2 == 0:
+        print(f"  Essay1: {found1} times | Essay2: {found2} times")
+        print(f"  Result: False — '{keyword}' not found in one or both essays.")
     else:
         print(f"  '{keyword}' → Essay1: {found1} times | Essay2: {found2} times")
         print(f"  Result: True")
